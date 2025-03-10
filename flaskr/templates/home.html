@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Today's License Plate Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>License Plate</th>
+                <th>Payment</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ row.start_time }}</td>
+                    <td>{{ row.end_time }}</td>
+                    <td>{{ row.license_plate }}</td>
+                    <td>{{ row.payment }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="estimated-amount">
+        <h2>Estimated Amount Earned: {{ estimated_amount }} Tsh</h2>
+    </div>
+{% endblock %}

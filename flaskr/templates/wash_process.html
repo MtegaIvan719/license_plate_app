@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Wash Process{% endblock %}
+
+{% block content %}
+    <div class="wash-process-container">
+        <h1 class="main-heading">Efficient Remote Management of Your Car Wash</h1>
+        <p class="intro-paragraph">Welcome to your remote car wash management system! With our state-of-the-art technology, you can oversee every aspect of your car wash operations from anywhere in the world. Our system ensures that your business runs smoothly, efficiently, and with the highest level of service for your customers.Here's how we make it possible:</p>
+        <div class="video-feed">
+            <img src="{{ url_for('license_plate.video_feed') }}" alt="Live Video Feed">
+        </div>
+    </div>
+{% endblock %}
